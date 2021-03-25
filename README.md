@@ -11,13 +11,13 @@ Parser for the Common Layer Interface (.cli) file [format.](http://web.archive.o
 
 ### Licence
 
-Licenced under Apache 2.0
+Licensed under Apache 2.0
 
 ### Contributing
 Please feel free to submit a PR. 
 
-Additionally, .cli files would be very usefull for testing, please consider 
-submitting any files to the testfiles directory as a PR. 
+Additionally, .cli files would be very useful for testing, please consider 
+submitting any files to the `testfiles` directory as a PR. 
 
 Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
