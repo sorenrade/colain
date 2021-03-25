@@ -1,8 +1,18 @@
 [package]
 name = "colain"
 version = "0.1.0"
-authors = ["Soren Rademacher <sorenrade@gmail.com>"]
+authors = ["Soren Leanza Rademacher <sorenrade@gmail.com>"]
 edition = "2018"
+
+description = "A parser for the Common Layer Interface format (.cli)"
+homepage = "https://github.com/sorenrade/colain"
+repository = "https://github.com/sorenrade/colain"
+license = "Apache-2.0"
+keywords = ["format", "cli", "3d", "file"]
+categories = ["parsing", "graphics", "science"]
+exclude = [
+    "testfiles/*"
+]
 
 [dependencies]
 bytes = "1.0.1"
