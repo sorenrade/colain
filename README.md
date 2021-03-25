@@ -1,7 +1,8 @@
+# colain
+
 [![Crates.io](https://img.shields.io/crates/v/colain.svg)](https://crates.io/crates/colain)
 [![Documentation](https://docs.rs/colain/badge.svg)](https://docs.rs/colain/)
 
-# colain
 Parser for the Common Layer Interface (.cli) file [format.](http://web.archive.org/web/19970617041930/http://www.cranfield.ac.uk/aero/rapid/CLI/cli_v20.html)
 
 **Note:** This library does not yet parse ASCII files. 
