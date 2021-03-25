@@ -7,7 +7,38 @@ Parser for the Common Layer Interface (.cli) file [format.](http://web.archive.o
 
 **Note:** This library does not yet parse ASCII files. 
 
-##### Requires `rustc` `1.51.0+`
+#### Requires `rustc` `1.51.0+`
+
+### Example
+
+```rust
+use std::fs::File;
+use std::io::prelude::*;
+use colain::{
+    CLI,
+    clitype::{LongCLI, ShortCLI},
+    Point // import the Point trait to provide access via .x() and .y()
+};
+
+// Load the file
+let mut buf: Vec<u8> = Vec::new();
+File::open("example.cli").unwrap().read_to_end(&mut buf).unwrap();
+
+// Parse the file
+let model = CLI::<LongCLI>::new(&buf).unwrap();
+
+// for each layer
+for layer in model.iter() {
+     // for each loop in the layer
+     for a_loop in layer.iter_loops() {
+         // for each point in the loop
+         for point in a_loop.iter() {
+             let x = point.x();
+             let y = point.y();
+         }
+     }
+ }
+```
 
 ### Licence
 
