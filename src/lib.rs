@@ -52,7 +52,7 @@ use std::fmt::Debug;
 use std::mem::size_of;
 
 mod util;
-use util::*;
+pub use util::*;
 
 /// A [`CLIType`] must be specified when creating a [`CLI`] object.
 ///

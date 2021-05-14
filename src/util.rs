@@ -7,7 +7,7 @@ pub struct ArrayChunksCopy<'a, T: 'a + Copy, const N: usize> {
 
 impl<'a, T: Copy, const N: usize> ArrayChunksCopy<'a, T, N> {
     #[inline]
-    pub(super) fn new(slice: &'a [T]) -> Self {
+    pub fn new(slice: &'a [T]) -> Self {
         let rem = slice.len() % N;
         let fst_len = slice.len() - rem;
         // SAFETY: 0 <= fst_len <= slice.len() by construction above
@@ -55,7 +55,7 @@ pub struct ArrayChunks<'a, T: 'a, const N: usize> {
 
 impl<'a, T, const N: usize> ArrayChunks<'a, T, N> {
     #[inline]
-    pub(super) fn new(slice: &'a [T]) -> Self {
+    pub fn new(slice: &'a [T]) -> Self {
         let rem = slice.len() % N;
         let fst_len = slice.len() - rem;
         // SAFETY: 0 <= fst_len <= slice.len() by construction above
