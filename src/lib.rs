@@ -368,7 +368,7 @@ pub enum Error {
 
 impl std::fmt::Display for Error {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(f, "{}", self)
+        write!(f, "{:?}", self)
     }
 }
 
@@ -626,5 +626,10 @@ $$GEOMETRYSTART          // start of GEOMETRY-section//
         assert_eq!(header.units, 1.0);
         assert_eq!(header.version, 1.05);
         Ok(())
+    }
+    #[test]
+    fn errors() {
+        assert_eq!("NoHeader", &format!("{}", Error::NoHeader));
+        assert_eq!("NoHeader", &format!("{:?}", Error::NoHeader));
     }
 }
